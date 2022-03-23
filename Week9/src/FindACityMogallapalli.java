@@ -2,7 +2,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Sabarish Mogallapalli - smogallapalli CIS171 27114 Mar 10, 2022
+ * Sabarish Mogallapalli - smogallapalli 
+ * CIS171 27114 
+ * Mar 10, 2022
  */
 
 public class FindACityMogallapalli {
