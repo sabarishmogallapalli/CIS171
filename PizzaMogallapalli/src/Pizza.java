@@ -4,21 +4,25 @@
 * 3/28/2022
 */ 
 
-public class Pizza {
+public class Pizza extends MenuItem {
 	private String topping;
 	private String size;
 	private double price;
+	private int orderNumber;
+	private static int nextOrderNumber = 1001;
 	
-	public Pizza(){
-		setTopping("cheese");
-		setSize("large");
-		setPrice(9.99);
-	}
-	
+
 	public Pizza(String topping, String size, double price) {
 		setTopping(topping);
 		setSize(size);
 		setPrice(price);
+		
+		nextOrderNumber++;
+		orderNumber = nextOrderNumber;
+		
+		if(getSize() == null) {
+			throw new IllegalArgumentException("Object not created");
+		}
 	}
 	
 	public String getTopping() {
@@ -34,7 +38,22 @@ public class Pizza {
 	}
 	
 	public void setSize(String size) {
-		this.size = size;
+		this.size = size.toLowerCase();
+		if (this.size.equals("small")) {
+			this.size = "small";
+		}
+		else if (this.size.equals("medium")) {
+			this.size = "medium";
+		}
+		else if (this.size.equals("large")) {
+			this.size = "large";
+		}
+		else if (this.size.equals("extra large")) {
+			this.size = "extra large";
+		}
+		else {
+			this.size = null;
+		}
 	}
 	
 	public double getPrice() {
@@ -45,14 +64,18 @@ public class Pizza {
 		this.price = price;
 	}
 	
+	public int getOrderNumber() {
+		return orderNumber;
+	}
+
 	public String repeatOrder() {
-		String order = "You ordered a " + this.getSize() + " " + this.getTopping() + " pizza for $" + this.getPrice() + ".";
+		String order = super.getDescription() + ". Your order number is: " + this.getOrderNumber() +  " and you ordered a " + this.getSize() + " " + this.getTopping() + " pizza for $" + this.getPrice() + ".";
 		return order;
 	}
 
 	@Override
 	public String toString() {
-		return "Pizza [topping=" + topping + ", size=" + size + ", price=" + price + "]";
+		return "Pizza [order number=" + orderNumber + ", topping=" + topping + ", size=" + size + ", price=" + price + "]";
 	}
 	
 }

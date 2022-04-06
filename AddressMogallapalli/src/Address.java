@@ -25,6 +25,9 @@ public Address(String address, String address2, String city, String state, Strin
 	setCity(city);
 	setState(state);
 	setPostalCode(postalCode);
+	if ((getState() == null) || (getPostalCode() == null)) {
+		throw new IllegalArgumentException("Object not found");
+	}
 }
 
 public Address(String address, String city, String state, String postalCode) {
@@ -32,6 +35,9 @@ public Address(String address, String city, String state, String postalCode) {
 	setCity(city);
 	setState(state);
 	setPostalCode(postalCode);
+	if ((getState() == null) || (getPostalCode() == null)) {
+		throw new IllegalArgumentException("Object not found");
+	}
 }
 
 
@@ -58,12 +64,26 @@ public String getState() {
 }
 public void setState(String state) {
 	this.state = state;
+	if (this.state.length() == 2) {
+		this.state = state;
+	}
+	else {
+		this.state = null;
+		System.out.print("Please only enter the abbreviation of the state (i.e. IA)");
+	}
 }
 public String getPostalCode() {
 	return postalCode;
 }
 public void setPostalCode(String postalCode) {
 	this.postalCode = postalCode;
+	if (this.postalCode.length() == 5) {
+		this.postalCode = postalCode;
+	}
+	else {
+		this.postalCode = null;
+		System.out.print("Please only enter 5 digits for the zip code (i.e. 50266)");
+	}
 }
 
 public String print() {
