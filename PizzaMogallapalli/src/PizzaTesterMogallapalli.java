@@ -11,10 +11,17 @@ public class PizzaTesterMogallapalli {
 		Pizza myPizza = new Pizza("mushroom", "large", 9.99);
 		Pizza yourPizza = new Pizza("pineapple", "extra large", 13.50);
 //		Pizza thirdPizza = new Pizza("pepperoni", "extra small", 7.99);
+		Pizza fourthPizza = Pizza.quickOrder("pepperoni");
+		Order sab = new Order();
 		yourPizza.setDescription("a flat bread with meat and cheese");
+		sab.addToOrder(myPizza);
+		sab.addToOrder(yourPizza);
+		sab.addToOrder(fourthPizza);
 		System.out.println("My Pizza: " + myPizza.repeatOrder());
 		System.out.println("Your Pizza: " + yourPizza.repeatOrder());
 //		System.out.println("Third Pizza: " + thirdPizza.repeatOrder());
+		System.out.println("Fourth pizza: " + fourthPizza.repeatOrder());
+		System.out.println(sab.getOrderTotal());
 	}
 
 }

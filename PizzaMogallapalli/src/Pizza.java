@@ -67,6 +67,11 @@ public class Pizza extends MenuItem {
 	public int getOrderNumber() {
 		return orderNumber;
 	}
+	
+	public static Pizza quickOrder(String topping) {
+		Pizza p = new Pizza(topping, "large", 9.99);
+		return p;
+	}
 
 	public String repeatOrder() {
 		String order = super.getDescription() + ". Your order number is: " + this.getOrderNumber() +  " and you ordered a " + this.getSize() + " " + this.getTopping() + " pizza for $" + this.getPrice() + ".";
