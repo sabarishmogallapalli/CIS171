@@ -1,3 +1,4 @@
+package model;
 
 public class Instructor {
 	private String firstName;
@@ -20,6 +21,7 @@ public class Instructor {
 	public Instructor(String nameFirst, String nameLast) {
 		setFirstName(nameFirst);
 		setLastName(nameLast);
+		setEmail(makeEmailAddress(nameFirst, nameLast));
 	}
 	
 	public String getFirstName() {

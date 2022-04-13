@@ -1,5 +1,5 @@
-/.DS_Store
-/Classroom.class
-/Instructor.class
-/InstructorTest.class
+/model/
+/view/
+/controller/
+/tests/
 /RegistrationTesterMogallapalli.class

@@ -1,5 +1,5 @@
+import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BowlingLeagueMogallapalli2 {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class BowlingLeagueMogallapalli2 {
 		Team teamTwo = new Team("Minnesota Mavericks", 7, "Marty");
 		Team teamThree = new Team("Iowa Cornhuskers", 2, "Ivy");
 		Team teamFour = new Team("Waukee Warriors", 20, "Walter");
-		Team teamFive = new Team("Northwest Wolves", 8, "Noah");;
+		Team teamFive = new Team("Northwest Wolves", 8, "Noah");
 		ArrayList<Team> teams = new ArrayList<Team>();
 		teams.add(teamOne);
 		teams.add(teamTwo);
@@ -43,5 +43,10 @@ public class BowlingLeagueMogallapalli2 {
 		} catch (Exception e) {
 			System.out.println("Team five: " + e.getMessage());
 		}
+		
+		League leagueOne = new League("Lane's Lanes", "3498 Bowling Lane, Waukee, IA 50266", "Tuesday", LocalTime.of(6, 30), teams);
+		League leagueTwo = new League("Lane's Lanes", "3498 Bowling Lane, Waukee, IA 50266", "Tuesday", LocalTime.of(6, 30), teams);
+		System.out.println(leagueOne.repeatLeague());
+		System.out.println(leagueTwo.duplicateLeagueForNextSession().repeatLeague());
 	}
 }

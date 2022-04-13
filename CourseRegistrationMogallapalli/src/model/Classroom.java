@@ -1,3 +1,4 @@
+package model;
 
 /**  
 * Sabarish Mogallapalli - smogallapalli
@@ -60,7 +61,7 @@ public class Classroom {
 	}
 	
 	public String toString() {
-		String courseRegistration = "Building: " + this.getBuilding() + "\nRoom Number: " + this.getRoomNumber() + "\nCampus: " + this.getCampus() + "\nType: " + this.getType() + "\nCapacity: " + this.getCapacity();
+		String courseRegistration = "Classroom [building=" + building + ", roomNumber=" + roomNumber + ", campus=" + campus + ", type=" + type + ", capacity=" + capacity + "]"; 
 		return courseRegistration;
 	}
 	

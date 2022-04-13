@@ -1,13 +1,18 @@
+package tests;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
+import model.Classroom;
 
 /**  
 * Sabarish Mogallapalli - smogallapalli
 * CIS171 27114
 * Mar 29, 2022  
 */
-class RegistrationTesterMogallapalli {
+class ClassroomTest {
 	Classroom compSciLab = new Classroom("8", "17", "Ankeny", "Computer Lab", 20);
+	Classroom bioLab  = new Classroom("3", "28a", "Carroll", "Science Lab", 22);
+	Classroom litRoom = new Classroom("Betts", "12", "Urban", "Classroom", 18);
 	
 	@Test
 	public void testBuilding() {
