@@ -4,7 +4,7 @@
 * 3/28/2022
 */ 
 
-public class Pizza extends MenuItem {
+public class Pizza extends MenuItem implements Cookable{
 	private String topping;
 	private String size;
 	private double price;
@@ -81,6 +81,28 @@ public class Pizza extends MenuItem {
 	@Override
 	public String toString() {
 		return "Pizza [order number=" + orderNumber + ", topping=" + topping + ", size=" + size + ", price=" + price + "]";
+	}
+
+	@Override
+	public double getOvenTemperature() {
+		// TODO Auto-generated method stub
+		return 425;
+	}
+
+	@Override
+	public String prepareIngredients() {
+		// TODO Auto-generated method stub
+		return "Ingredients: " + this.topping + ", sauce, cheese, special seasonings";
+	}
+
+	@Override
+	public boolean readyForOven() {
+		// TODO Auto-generated method stub
+		if (prepareIngredients() != null) {
+			return true;
+			} else {
+			return false;
+			}
 	}
 	
 }

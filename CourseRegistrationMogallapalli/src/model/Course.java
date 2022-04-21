@@ -1,3 +1,8 @@
+/**  
+* Sabarish Mogallapalli - smogallapalli
+* CIS171 27114
+* April 19, 2022
+*/
 package model;
 
 import java.time.LocalTime;

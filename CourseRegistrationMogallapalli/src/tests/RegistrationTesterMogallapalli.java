@@ -4,7 +4,11 @@ import java.time.LocalTime;
 import model.Classroom;
 import model.Course;
 import model.Instructor;
-
+/**  
+* Sabarish Mogallapalli - smogallapalli
+* CIS171 27114
+* April 19, 2022
+*/
 public class RegistrationTesterMogallapalli {
 
 	public static void main(String[] args) {

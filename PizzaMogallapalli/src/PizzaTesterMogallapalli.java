@@ -17,6 +17,9 @@ public class PizzaTesterMogallapalli {
 		sab.addToOrder(myPizza);
 		sab.addToOrder(yourPizza);
 		sab.addToOrder(fourthPizza);
+		yourPizza.getOvenTemperature();
+		System.out.println(yourPizza.prepareIngredients());
+		System.out.println("Ready for the Oven: " + yourPizza.readyForOven());
 		System.out.println("My Pizza: " + myPizza.repeatOrder());
 		System.out.println("Your Pizza: " + yourPizza.repeatOrder());
 //		System.out.println("Third Pizza: " + thirdPizza.repeatOrder());
